@@ -13,12 +13,12 @@ function Login() {
             <label htmlFor="username">Username: </label>
             <input id="username" type="text" name="username" placeholder="Username" />
           </div>
-          <br />
+          <br/>
           <div>
             <label htmlFor="password">Password: </label>
             <input id="password" type="password" name="password" placeholder="Password" />
           </div>
-          <br />
+          <br/>
           <button type="submit">Submit</button>
         </form>
       </main>

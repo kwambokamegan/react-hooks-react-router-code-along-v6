@@ -4,14 +4,15 @@ import NavBar from "../components/NavBar";
 
 function UserProfile() {
   const [user, setUser] = useState({});
-  const { id } = useParams();
+  const params = useParams();
+  const userId = params.id;
 
   useEffect(() => {
-    fetch(`http://localhost:4000/users/${id}`)
+    fetch(`http://localhost:4000/users/${userId}`)
       .then(r => r.json())
       .then(data => setUser(data))
       .catch(error => console.error(error));
-  }, [id]);
+  }, [userId]);
 
   if (!user.name) {
     return <h1>Loading...</h1>;
